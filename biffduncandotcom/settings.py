@@ -185,16 +185,7 @@ THUMBNAIL_PROCESSORS = (
     'easy_thumbnails.processors.filters'
 )
 
-ALLOWED_HOSTS = [
-    'localhost',
-    '127.0.0.1',
-    '[::1]',
-    '192.168.124.53',
-    '192.168.124.65',
-    '192.168.124.56',
-    '192.168.124.71',
-    '192.168.124.87'
-    ]
+ALLOWED_HOSTS = ['*']
 
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' 
