@@ -46,7 +46,7 @@ ROOT_URLCONF = 'biffduncandotcom.urls'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'biffduncandotcom', 'static'),
-    os.path.join(PROJECT_ROOT, 'biffduncandotcom', 'static'),
+    os.path.join(PROJECT_ROOT, 'static'),
 )
 SITE_ID = 1
 
