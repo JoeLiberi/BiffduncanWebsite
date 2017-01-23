@@ -1,0 +1,9 @@
+-Create a "Services" app
+	Models:
+		Input a list of services
+
+	View:
+		Display the Title, description and image associated with that service.
+
+	Integrate with djancms
+
