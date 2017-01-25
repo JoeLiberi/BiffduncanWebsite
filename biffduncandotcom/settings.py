@@ -178,20 +178,20 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-# if DEBUG:
-#     DATABASES = {
-#         'default': {
-#             'CONN_MAX_AGE': 0,
-#             'ENGINE': 'django.db.backends.sqlite3',
-#             'HOST': 'localhost',
-#             'NAME': DATA_DIR+ '/database.db',
-#             'PASSWORD': '',
-#             'PORT': '',
-#             'USER': ''
-#         }
-#     }
+if DEBUG:
+    DATABASES = {
+        'default': {
+            'CONN_MAX_AGE': 0,
+            'ENGINE': 'django.db.backends.sqlite3',
+            'HOST': 'localhost',
+            'NAME': DATA_DIR+ '/database.db',
+            'PASSWORD': '',
+            'PORT': '',
+            'USER': ''
+        }
+    }
 
-# else:
+else:
 #     ''' Heroku Clear MySQLDB '''
 #     # Register database schemes in URLs.
 #     urlparse.uses_netloc.append('mysql')
@@ -201,8 +201,8 @@ CMS_PLACEHOLDER_CONF = {}
 #         # Check to make sure DATABASES is set in settings.py file.
 #         # If not default to {}
 
-#         if 'DATABASES' not in locals():
-#             DATABASES = {}
+    if 'DATABASES' not in locals():
+        DATABASES = {}
 
 #         if 'DATABASE_URL' in os.environ:
 #             url = urlparse.urlparse(os.environ['DATABASE_URL'])
@@ -221,7 +221,17 @@ CMS_PLACEHOLDER_CONF = {}
 
 
 #             if url.scheme == 'mysql':
-#                 DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
+    DATABASES = {
+        'default': {
+            'CONN_MAX_AGE': 500,
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': '',
+            'NAME': '',
+            'PASSWORD': '',
+            'PORT': '',
+            'USER': ''
+        }
+    }
 #     except Exception:
 #         print('Unexpected error:', sys.exc_info())
 
