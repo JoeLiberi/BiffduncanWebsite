@@ -1,5 +1,4 @@
 .env
-biffduncandotcom/settings.py
 biffduncandotcom/local_settings.py
 static
 biffduncandotcom/staticfiles
