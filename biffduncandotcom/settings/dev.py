@@ -2,6 +2,8 @@ from biffduncandotcom.settings.base import *
 
 DEBUG=True
 
+SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
+
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
