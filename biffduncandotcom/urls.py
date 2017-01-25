@@ -25,7 +25,7 @@ admin.autodiscover()
 
 urlpatterns = [
 	url(r'^admin/', include(admin.site.urls)),  # NOQA
-	url(r'', views.index, name='index'),
+	url(r'^$', views.index, name='index'),
 	url(r'^', include('cms.urls')),
 ]
 
@@ -34,4 +34,4 @@ if settings.DEBUG:
     urlpatterns = [
         url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ] + staticfiles_urlpatterns() + urlpatterns
+        ] + urlpatterns + staticfiles_urlpatterns()
