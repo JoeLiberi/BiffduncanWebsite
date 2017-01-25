@@ -4,9 +4,7 @@ SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 
 DEBUG=True
 
-ALLOWED_HOSTS = [
-	'*',
-	]
+ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
 AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
