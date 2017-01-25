@@ -14,7 +14,7 @@ def index(request):
 	template = loader.get_template('base.html')
 	services_list = Services.get_all_services()
 	portfolio_list = Portfolio.get_all_services()
-	aboutus_txt = Aboutus.objects.all()[0]
+	aboutus_txt = Aboutus.objects.all()
 	employees = Employee.objects.all()
 	form_class = ContactForm
 

@@ -14,13 +14,13 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RemoveField(
-            model_name='services',
-            name='id',
-        ),
-        migrations.AddField(
-            model_name='services',
-            name='cmsplugin_ptr',
-            field=models.OneToOneField(default=0, on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, related_name='+', serialize=False, to='cms.CMSPlugin'),
-        ),
+        # migrations.RemoveField(
+        #     model_name='services',
+        #     name='id',
+        # ),
+        # migrations.AddField(
+        #     model_name='services',
+        #     name='cmsplugin_ptr',
+        #     field=models.OneToOneField(default=models.CharField(max_length=24, verbose_name='title'), on_delete=django.db.models.deletion.CASCADE, parent_link=True, primary_key=True, related_name='+', serialize=False, to='cms.CMSPlugin'),
+        # ),
     ]
