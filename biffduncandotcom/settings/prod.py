@@ -7,9 +7,9 @@ DEBUG=True
 ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
-AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
-AWS_ACCESS_KEY = os.environ['AWS_ACCESS_KEY']
-AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.getenv['AWS_STORAGE_BUCKET_NAME']
+AWS_ACCESS_KEY = os.getenv['AWS_ACCESS_KEY']
+AWS_SECRET_ACCESS_KEY = os.getenv['AWS_SECRET_ACCESS_KEY']
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 S3_URL = 'http://{s3name}.s3.amazonaws.com/'.format(s3name=AWS_STORAGE_BUCKET_NAME)
 STATIC_URL = S3_URL
