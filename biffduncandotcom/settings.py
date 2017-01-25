@@ -1,4 +1,5 @@
-import os, sys, urlparse
+import os, sys, 
+from urllib.parse import urlparse
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
