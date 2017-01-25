@@ -176,28 +176,28 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'CONN_MAX_AGE': 0,
-            'ENGINE': 'django.db.backends.sqlite3',
-            'HOST': 'localhost',
-            'NAME': DATA_DIR+ '/database.db',
-            'PASSWORD': '',
-            'PORT': '',
-            'USER': ''
-        }
+# if DEBUG:
+DATABASES = {
+    'default': {
+        'CONN_MAX_AGE': 0,
+        'ENGINE': 'django.db.backends.sqlite3',
+        'HOST': 'localhost',
+        'NAME': DATA_DIR+ '/database.db',
+        'PASSWORD': '',
+        'PORT': '',
+        'USER': ''
     }
+}
 
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'biffduncanwebsitedb',
-            'USER': 'root',
-            'PASSWORD': 'biffduncan',
-        }
-    }
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'NAME': 'biffduncanwebsitedb',
+#             'USER': 'root',
+#             'PASSWORD': 'biffduncan',
+#         }
+#     }
 
 MIGRATION_MODULES = {
     
