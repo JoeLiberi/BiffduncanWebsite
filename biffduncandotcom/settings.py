@@ -196,7 +196,7 @@ else:
     urllib.parse.uses_netloc.append('postgres')
     urllib.parse.uses_netloc.append('mysql')
     try:
-        if os.environ.has_key('DATABASE_URL'):
+        if 'DATABASE_URL' in os.environ:
             url = urlparse.urlparse(os.environ['DATABASE_URL'])
             DATABASES['default'] = {
                 'NAME':     url.path[1:],
