@@ -1,6 +1,6 @@
 from biffduncandotcom.settings.base import *
 
-SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
+SECRET_KEY = biffduncandotcom.settings.base.SECRET_KEY
 
 DEBUG=True
 

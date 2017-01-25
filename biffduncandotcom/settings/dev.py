@@ -1,5 +1,7 @@
 from biffduncandotcom.settings.base import *
 
+SECRET_KEY = biffduncandotcom.settings.base.SECRET_KEY
+
 DEBUG=True
 
 ALLOWED_HOSTS = ['*']
