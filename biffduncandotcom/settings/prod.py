@@ -5,8 +5,9 @@ SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 DEBUG=False
 
 ALLOWED_HOSTS = [
-	'100.35.177.146',
+	'*',
 	]
+
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
 AWS_STORAGE_BUCKET_NAME = 'biffduncan-website'
 AWS_ACCESS_KEY = 'AKIAJOPZJ2Z4NNFE6JNA'
