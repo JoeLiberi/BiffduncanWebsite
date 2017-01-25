@@ -1,4 +1,5 @@
 from biffduncandotcom.settings.base import *
+import biffduncandotcom.custom_storages
 
 DEBUG=False
 
@@ -8,9 +9,17 @@ ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
-STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 S3_URL = 'http://{s3name}.s3.amazonaws.com/'.format(s3name=AWS_STORAGE_BUCKET_NAME)
-STATIC_URL = S3_URL
+# STATIC_URL = S3_URL
+
+STATICFILES_LOCATION = 'static'
+STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATIC_URL = "https://%s/%s/" % (S3_URL, STATICFILES_LOCATION)
+
+MEDIAFILES_LOCATION = 'media'
+MEDIA_URL = "https://%s/%s/" % (S3_URL, MEDIAFILES_LOCATION)
+DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 INSTALLED_APPS = [
     'djangocms_admin_style',

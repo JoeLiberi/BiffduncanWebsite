@@ -10,6 +10,7 @@ STATICFILES_DIRS = (
     # os.path.join(PROJECT_ROOT, 'static'),
 )
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
 
 INSTALLED_APPS = [
     'djangocms_admin_style',
