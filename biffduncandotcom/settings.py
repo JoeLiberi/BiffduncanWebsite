@@ -31,9 +31,12 @@ DEBUG = False
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
 if not DEBUG:
-    AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
-    AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY']
-    AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    # AWS_STORAGE_BUCKET_NAME = os.environ['AWS_STORAGE_BUCKET_NAME']
+    # AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY']
+    # AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+    AWS_STORAGE_BUCKET_NAME = 'biffduncan-website'
+    AWS_ACCESS_KEY = 'AKIAJOPZJ2Z4NNFE6JNA'
+    AWS_SECRET_ACCESS_KEY = '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'
     STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     S3_URL = 'http://{s3name}.s3.amazonaws.com/'.format(s3name=AWS_STORAGE_BUCKET_NAME)
     STATIC_URL = S3_URL
