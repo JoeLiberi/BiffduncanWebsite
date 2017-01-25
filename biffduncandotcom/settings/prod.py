@@ -1,4 +1,4 @@
-from biffduncandotcom.settings.base import *
+from base import *
 
 DEBUG=True
 
@@ -22,6 +22,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'storages',
+    'boto',
     'cms',
     'menus',
     'sekizai',
@@ -46,8 +48,6 @@ INSTALLED_APPS = [
     'ourteam.apps.OurteamConfig',
     'contactus.apps.ContactusConfig',
     'widget_tweaks',
-    'storages',
-    'boto'
     # 'django_smartfields',
 ]
 

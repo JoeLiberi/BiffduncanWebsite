@@ -1,8 +1,6 @@
-from biffduncandotcom.settings.base import *
+from base import *
 
 DEBUG=True
-
-SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 
 ALLOWED_HOSTS = ['*']
 
@@ -23,6 +21,8 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'django.contrib.staticfiles',
     'django.contrib.messages',
+    'storages',
+    'boto',
     'cms',
     'menus',
     'sekizai',
@@ -47,8 +47,6 @@ INSTALLED_APPS = [
     'ourteam.apps.OurteamConfig',
     'contactus.apps.ContactusConfig',
     'widget_tweaks',
-    'storages',
-    'boto'
     # 'django_smartfields',
 ]
 

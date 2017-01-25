@@ -9,7 +9,6 @@ PROJECT_ROOT = DATA_DIR
 
 SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 ROOT_URLCONF = 'biffduncandotcom.urls'
