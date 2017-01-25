@@ -1,4 +1,5 @@
-import os
+import os, sys, urlparse
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
