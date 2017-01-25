@@ -195,7 +195,11 @@ if DEBUG:
 else:
     urllib.parse.uses_netloc.append('postgres')
     urllib.parse.uses_netloc.append('mysql')
+
+    DATABASES = {}
+
     try:
+
         if 'DATABASE_URL' in os.environ:
             url = urlparse(os.environ['DATABASE_URL'])
             DATABASES['default'] = {
