@@ -1,4 +1,4 @@
-from base import *
+from biffduncandotcom.settings.base import *
 
 DEBUG=True
 
