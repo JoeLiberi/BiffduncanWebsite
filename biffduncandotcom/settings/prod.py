@@ -1,6 +1,6 @@
 from biffduncandotcom.settings.base import *
 
-DEBUG=True
+DEBUG=False
 
 ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
 
