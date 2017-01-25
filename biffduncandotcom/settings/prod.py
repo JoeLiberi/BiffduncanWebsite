@@ -1,5 +1,7 @@
 from biffduncandotcom.settings.base import *
 
+SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
+
 DEBUG=False
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
