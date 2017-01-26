@@ -11,7 +11,7 @@ class Aboutus(CMSPlugin):
 		(2, _('Public')),
 	)
 
-	synopsis = models.HTMLField(_('textfield'))
+	synopsis = HTMLField(_('textfield'))
 
 	class Meta:
 		verbose_name = _('aboutus')
