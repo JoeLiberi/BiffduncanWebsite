@@ -4,8 +4,8 @@ from urllib.parse import urlparse
 
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# PROJECT_ROOT = BASE_DIR
+BASE_DIR = DATA_DIR
+PROJECT_ROOT = DATA_DIR
 
 SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 

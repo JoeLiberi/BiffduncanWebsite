@@ -1,4 +1,5 @@
 from biffduncandotcom.settings.base import *
+import dj_database_url
 import custom_storages
 
 DEBUG=False
@@ -62,6 +63,9 @@ INSTALLED_APPS = [
 
 urllib.parse.uses_netloc.append('postgres')
 urllib.parse.uses_netloc.append('mysql')
+
+# db_from_env = dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(db_from_env)
 
 try:
 
