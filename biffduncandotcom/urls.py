@@ -17,17 +17,17 @@ admin.autodiscover()
 #     url(r'^select2/', include('django_select2.urls')),
 # ]
 
-urlpatterns += i18n_patterns('',
-	url(r'^admin/', include(admin.site.urls)),  # NOQA
-	url(r'^$', views.index, name='index'),
-	url(r'^', include('cms.urls')),
-)
-
-# urlpatterns = [
+# urlpatterns += i18n_patterns('',
 # 	url(r'^admin/', include(admin.site.urls)),  # NOQA
 # 	url(r'^$', views.index, name='index'),
 # 	url(r'^', include('cms.urls')),
-# ]
+# )
+
+urlpatterns = [
+	url(r'^admin/', include(admin.site.urls)),  # NOQA
+	url(r'^$', views.index, name='index'),
+	url(r'^', include('cms.urls')),
+]
 
 # This is only needed when using runserver.
 if settings.DEBUG:

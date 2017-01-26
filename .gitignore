@@ -3,3 +3,4 @@ biffduncandotcom/local_settings.py
 static
 biffduncandotcom/staticfiles
 biffduncandotcom/settings/dev.py
+biffduncandotcom/tmp
