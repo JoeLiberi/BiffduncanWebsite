@@ -3,7 +3,7 @@ import urllib.parse
 from urllib.parse import urlparse
 
 gettext = lambda s: s
-BASE_DIR = BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.dirname(BASE_DIR)
 
 SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
@@ -93,7 +93,7 @@ CMS_PERMISSION = True
 
 CMS_PLACEHOLDER_CONF = {}
 
-DATABASES = {}
+# DATABASES = {}
 
 MIGRATION_MODULES = {
     
