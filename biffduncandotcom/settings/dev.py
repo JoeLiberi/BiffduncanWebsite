@@ -11,6 +11,8 @@ STATICFILES_DIRS = (
 )
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
+STATICFILES_LOCATION = '/static/'
+MEDIAFILES_LOCATION = '/media/'
 
 INSTALLED_APPS = [
     'djangocms_admin_style',

@@ -10,8 +10,7 @@ SECRET_KEY = 'jg84&m5n)erg)0g+l9&t&sv++#iimj70brigz(w^h-bq7g+azy'
 
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 ROOT_URLCONF = 'biffduncandotcom.urls'
-STATICFILES_LOCATION = '/static/'
-MEDIAFILES_LOCATION = '/media/'
+
 
 SITE_ID = 1
 
