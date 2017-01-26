@@ -3,22 +3,24 @@ import custom_storages, dj_database_url
 
 DEBUG=True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    'obscure-wildwood-69861.herokuapp.com',
+    'www.biffduncan.com']
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
 AWS_ACCESS_KEY = os.getenv('AWS_ACCESS_KEY')
 AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 # STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-S3_URL = 'http://{s3name}.s3.amazonaws.com/'.format(s3name=AWS_STORAGE_BUCKET_NAME)
+S3_URL = '{s3name}.s3.amazonaws.com'.format(s3name=AWS_STORAGE_BUCKET_NAME)
 # STATIC_URL = S3_URL
 
 STATICFILES_LOCATION = ''
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATIC_URL = "https://%s/%s" % (S3_URL, STATICFILES_LOCATION)
+STATIC_URL = "https://{url}/{folder}".format(url=S3_URL, folder=STATICFILES_LOCATION)
 
 MEDIAFILES_LOCATION = 'media'
-MEDIA_URL = "https://%s/%s/" % (S3_URL, MEDIAFILES_LOCATION)
+MEDIA_URL = "https://{url}/{folder}/".format(url=S3_URL, folder=MEDIAFILES_LOCATION)
 DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
 
 INSTALLED_APPS = [
