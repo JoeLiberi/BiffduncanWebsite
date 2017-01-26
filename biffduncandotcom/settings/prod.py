@@ -1,5 +1,5 @@
 from biffduncandotcom.settings.base import *
-import biffduncandotcom.custom_storages
+from biffduncandotcom import custom_storages
 
 DEBUG=False
 
