@@ -130,7 +130,7 @@
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                         <!-- <i class="fa fa-circle fa-stack-2x text-primary"></i> -->
-                        <img src="{{ MEDIA_ROOT }}{{ service.image }}" class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        <img src="{{ MEDIA_URL }}{{ service.image }}" class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="service-heading">{{ service.title }}</h4>
                         <p class="text-muted">{{ service.description }}</p>
@@ -157,7 +157,7 @@
                                     <i class="fa fa-plus fa-3x"></i>
                                 </div>
                             </div>
-                            <img src="{{ MEDIA_ROOT }}{{ p.image }}" class="img-responsive" alt="">
+                            <img src="{{ MEDIA_URL }}{{ p.image }}" class="img-responsive" alt="">
                         </a>
                         <div class="portfolio-caption">
                             <h4>{{p.title}}</h4>
@@ -195,7 +195,7 @@
                 {% for e in employees %}
                     <div class="col-md-4 col-sm-6 text-center">
                         <div class="team-member">
-                            <img src="{{ MEDIA_ROOT }}{{ e.image }}" class="img-responsive img-circle" alt="">
+                            <img src="{{ MEDIA_URL }}{{ e.image }}" class="img-responsive img-circle" alt="">
                             <h4>{{e.name}}</h4>
                             <p class="text-muted">{{e.title}}</p>
                             <ul class="list-inline social-buttons">
