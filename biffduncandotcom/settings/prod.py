@@ -3,7 +3,7 @@ import custom_storages, dj_database_url
 
 DEBUG=True
 
-ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 #Storage on S3 settings are stored as os.environs to keep settings.py clean
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_STORAGE_BUCKET_NAME')
