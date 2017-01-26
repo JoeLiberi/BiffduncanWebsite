@@ -15,9 +15,9 @@ AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY')
 S3_URL = '{s3name}.s3.amazonaws.com'.format(s3name=AWS_STORAGE_BUCKET_NAME)
 # STATIC_URL = S3_URL
 
-STATICFILES_LOCATION = ''
+STATICFILES_LOCATION = 'static'
 STATICFILES_STORAGE = 'custom_storages.StaticStorage'
-STATIC_URL = "https://{url}/{folder}".format(url=S3_URL, folder=STATICFILES_LOCATION)
+STATIC_URL = "https://{url}/{folder}/".format(url=S3_URL, folder=STATICFILES_LOCATION)
 
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://{url}/{folder}/".format(url=S3_URL, folder=MEDIAFILES_LOCATION)
