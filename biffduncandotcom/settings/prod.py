@@ -1,5 +1,5 @@
 from biffduncandotcom.settings.base import *
-import custom_storages, dj_database_url
+import dj_database_url
 
 DEBUG=True
 
