@@ -1,6 +1,7 @@
 from django.db import models
 from cms.models.pluginmodel import CMSPlugin
 from django.utils.translation import ugettext_lazy as _
+from tinymce.models import HTMLField
 
 class Aboutus(CMSPlugin):
 	# Services Model
@@ -10,7 +11,7 @@ class Aboutus(CMSPlugin):
 		(2, _('Public')),
 	)
 
-	synopsis = models.TextField(_('textfield'))
+	synopsis = models.HTMLField(_('textfield'))
 
 	class Meta:
 		verbose_name = _('aboutus')

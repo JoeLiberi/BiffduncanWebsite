@@ -16,6 +16,7 @@ django-sekizai==0.10.0
 Django-Select2==5.8.10
 django-smartfields==1.0.9
 django-storages==1.5.2
+django-tinymce==2.6.0
 django-treebeard==4.1.0
 django-widget-tweaks==1.4.1
 djangocms-admin-style==1.2.6.2

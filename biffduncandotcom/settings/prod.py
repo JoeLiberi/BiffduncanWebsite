@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     'contactus.apps.ContactusConfig',
     'widget_tweaks',
     # 'django_smartfields',
+    'tinymce'
 ]
 
 urllib.parse.uses_netloc.append('postgres')
