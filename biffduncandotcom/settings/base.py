@@ -3,7 +3,7 @@ import urllib.parse
 from urllib.parse import urlparse
 
 gettext = lambda s: s
-DATA_DIR = os.path.dirname(__file__)
+DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 BASE_DIR = DATA_DIR
 PROJECT_ROOT = DATA_DIR
 
