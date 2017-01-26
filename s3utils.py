@@ -1,5 +1,5 @@
 from __future__ import absolute_import
-import storages.backends.s3boto
+from storages.backends.s3boto import S3BotoStorage
 
-StaticRootS3BotoStorage = lambda: storages.backends.s3boto.S3BotoStorage(location='static')
-MediaRootS3BotoStorage  = lambda: storages.backends.s3boto.S3BotoStorage(location='media')
+StaticRootS3BotoStorage = lambda: S3BotoStorage(location='static')
+MediaRootS3BotoStorage  = lambda: S3BotoStorage(location='media')
