@@ -1,7 +1,7 @@
 from biffduncandotcom.settings.base import *
 import custom_storages, dj_database_url
 
-DEBUG=False
+DEBUG=True
 
 ALLOWED_HOSTS = ['obscure-wildwood-69861.herokuapp.com']
 
