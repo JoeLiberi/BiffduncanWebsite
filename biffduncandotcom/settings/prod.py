@@ -16,12 +16,12 @@ S3_URL = '{s3name}.s3.amazonaws.com'.format(s3name=AWS_STORAGE_BUCKET_NAME)
 # STATIC_URL = S3_URL
 
 STATICFILES_LOCATION = 'static'
-STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 STATIC_URL = "https://{url}/{folder}/".format(url=S3_URL, folder=STATICFILES_LOCATION)
 
 MEDIAFILES_LOCATION = 'media'
 MEDIA_URL = "https://{url}/{folder}/".format(url=S3_URL, folder=MEDIAFILES_LOCATION)
-DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 INSTALLED_APPS = [
     'djangocms_admin_style',
