@@ -1,5 +1,5 @@
 from django.template import Library
-from biffduncandotcom.settings import MEDIA_URL
+from biffduncandotcom.settings.prod import *
 register = Library()
 
 @register.simple_tag
