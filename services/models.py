@@ -57,6 +57,7 @@ class Services(CMSPlugin):
 		Example: [[1, 2, 3], [4, 5, 6], [7, 8]]
 		'''
 		all_entries = Services.objects.all().order_by('created')
+		all_entries = list(all_entries)
 		tmp_l = []
 
 		for service in all_entries:
@@ -73,8 +74,11 @@ class Services(CMSPlugin):
 				tmp_l.append(b_name)
 
 		p = len(all_entries)%3
-		tmp_l.append(all_entries[-p:])
 
-		all_entries = tmp_l
+		if p == 0:
+			all_entries = tmp_l
+		else:
+			tmp_l.append(all_entries[-p:])
+			all_entries = tmp_l
 
 		return all_entries
