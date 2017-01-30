@@ -46,7 +46,7 @@
             padding-right: 20px;
         }
         .container {
-            width: 940px;
+            width: 1140px;
             margin: 0 auto
         }
         .content {
@@ -131,7 +131,7 @@
                 <!-- Use the "services.html" template to display all services in database -->
                 
                     {% for service in s_list %}
-                        <div class="col-lg-4 col-md-4 col-xs-4">
+                        <div class="col-md-6 col-md-4 col-xs-4">
                             <span class="fa-stack fa-4x">
                             <!-- <i class="fa fa-circle fa-stack-2x text-primary"></i> -->
                             <img src="{{ MEDIA_URL }}{{ service.image }}" class="fa fa-shopping-cart fa-stack-1x fa-inverse"></i>
@@ -183,7 +183,7 @@
                     <h2 class="section-heading">About</h2>
                 </div>
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p>{{ aboutus.synopsis }}</p>
+                    {% autoescape off %}{{ aboutus.synopsis }}{% endautoescape %}
                 </div>
             </div>
         </div>
