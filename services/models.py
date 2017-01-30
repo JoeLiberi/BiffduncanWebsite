@@ -49,6 +49,32 @@ class Services(CMSPlugin):
 		return slugify(sluggy)
 
 	def get_all_services():
-		# all_entries = Services.objects.all()
+		'''
+		Split the services section up so its formated nicely.
+
+		Returns a nested list with no more than 3 entries in each child list.
+
+		Example: [[1, 2, 3], [4, 5, 6], [7, 8]]
+		'''
 		all_entries = Services.objects.all().order_by('created')
+		tmp_l = []
+
+		for service in all_entries:
+			i = all_entries.index(service)
+
+			if i%3 == 0:
+				b_name = "b{number}".format(number=i)
+				b_name = []
+
+			if i%3 <= 2:
+				b_name.append(service)
+
+			if i%3 == 2:
+				tmp_l.append(b_name)
+
+		p = len(all_entries)%3
+		tmp_l.append(all_entries[-p:])
+
+		all_entries = tmp_l
+
 		return all_entries

@@ -11,8 +11,8 @@ from django.shortcuts import redirect
 from django.template.loader import get_template
 
 def index(request):
-	template = loader.get_template('base.html')
 	services_list = Services.get_all_services()
+	template = loader.get_template('base.html')
 	portfolio_list = Portfolio.get_all_services()
 	employees = Employee.objects.all()
 	form_class = ContactForm
