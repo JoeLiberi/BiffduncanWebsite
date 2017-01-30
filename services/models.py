@@ -10,13 +10,8 @@ from django.template.defaultfilters import slugify
 class Services(CMSPlugin):
 	# Services Model
 
-	STATUS_CHOICES = (
-		(1, _('Draft')),
-		(2, _('Public')),
-	)
-
 	# Set Title
-	title = models.CharField(_('title'), max_length=24)
+	title = models.CharField(_('title'), max_length=64)
 	# cmsplugin_ptr = models.CharField(_('cmsplugin_ptr_id'), max_length=24)
 
 	# Define Slug
@@ -25,12 +20,6 @@ class Services(CMSPlugin):
 	# Set Image upload path and image properties
 	image_upload_path = 'services/%Y/%m/%d'
 	image = models.ImageField(upload_to=image_upload_path, max_length=100)
-
-	# image = fields.ImageField(upload_to=image_upload_path, 
-	# 	dependencies=[
-	#         FileDependency(processor=ImageProcessor(
-	#             format='JPEG',))
-	#     ])
 
 	# Set the description
 	description = models.CharField(_('description'), max_length=200)

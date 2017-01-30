@@ -20,6 +20,7 @@ def index(request):
 	try:
 		aboutus_txt = Aboutus.objects.all()[0]
 	except:
+		# This will return nothing
 		aboutus_txt = Aboutus.objects.all()
 
 	""" Logic for Email """
