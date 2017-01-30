@@ -126,9 +126,10 @@
                     <h2 class="section-heading">Services</h2>
                 </div>
             </div>
-            <div class="row text-center">
+            {% for s_list in services %}
+                <div class="row text-center">
                 <!-- Use the "services.html" template to display all services in database -->
-                {% for s_list in services %}
+                
                     {% for service in s_list %}
                         <div class="col-md-4">
                             <span class="fa-stack fa-4x">
@@ -139,8 +140,9 @@
                             <p class="text-muted">{{ service.description }}</p>
                         </div>
                     {% endfor %}
-                {% endfor %}
-            </div>
+                </div>
+            {% endfor %}
+            
         </div>
     </section>
 
