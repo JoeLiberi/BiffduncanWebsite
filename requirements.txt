@@ -39,10 +39,12 @@ olefile==0.44
 Pillow==4.0.0
 pyasn1==0.1.9
 python-dateutil==2.6.0
+python-http-client==2.2.1
 pytz==2016.10
 PyYAML==3.12
 rsa==3.4.2
 s3transfer==0.1.10
+sendgrid==3.6.3
 six==1.10.0
 South==1.0.2
 tzlocal==1.3

@@ -54,7 +54,12 @@ class Services(CMSPlugin):
 
 		Returns a nested list with no more than 3 entries in each child list.
 
-		Example: [[1, 2, 3], [4, 5, 6], [7, 8]]
+		Example: 
+			Input: 
+				[1, 2, 3, 4, 5, 6, 7, 8]
+
+			Output:
+				[[1, 2, 3], [4, 5, 6], [7, 8]]
 		'''
 		all_entries = Services.objects.all().order_by('created')
 		all_entries = list(all_entries)

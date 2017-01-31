@@ -49,7 +49,7 @@ def index(request):
 				"New contact form submission",
 				content,
 				"Your website" +'',
-				['youremail@gmail.com'],
+				['info@biffduncan.com'],
 				headers = {'Reply-To': contact_email }
 				)
 			email.send()
