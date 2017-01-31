@@ -57,13 +57,14 @@ def index(request):
 			# 	)
 			# email.send()
 			# return redirect('#')
-			
+
 			sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
 			from_email = Email("website@biffduncan.com")
 			subject = "New Customer Inquery"
 			to_email = Email("info@biffduncan.com")
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
+			return redirect('#')
 
 	context = {
 		'services' : services_list,
