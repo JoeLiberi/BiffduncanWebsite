@@ -9,6 +9,9 @@ from contactus.forms import ContactForm
 from django.core.mail import EmailMessage
 from django.shortcuts import redirect
 from django.template.loader import get_template
+import sendgrid
+import os
+from sendgrid.helpers.mail import *
 
 def index(request):
 	services_list = Services.get_all_services()
@@ -35,7 +38,7 @@ def index(request):
 
 			# Email the profile with the 
 			# contact information
-			template = get_template('contact_template.txt')
+			# template = get_template('contact_template.txt')
 			context = Context({
 				'contact_name': contact_name,
 				'contact_email': contact_email,
@@ -45,15 +48,22 @@ def index(request):
 
 			content = template.render(context)
 
-			email = EmailMessage(
-				"New contact form submission",
-				content,
-				"Your website" +'',
-				['info@biffduncan.com'],
-				headers = {'Reply-To': contact_email }
-				)
-			email.send()
+			# email = EmailMessage(
+			# 	"New contact form submission",
+			# 	content,
+			# 	"Your website" +'',
+			# 	['info@biffduncan.com'],
+			# 	headers = {'Reply-To': contact_email }
+			# 	)
+			# email.send()
 			# return redirect('#')
+			
+			sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
+			from_email = Email("website@biffduncan.com")
+			subject = "New Customer Inquery"
+			to_email = Email("info@biffduncan.com")
+			mail = Mail(from_email, subject, to_email, content)
+			response = sg.client.mail.send.post(request_body=mail.get())
 
 	context = {
 		'services' : services_list,
