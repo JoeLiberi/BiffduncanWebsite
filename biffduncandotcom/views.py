@@ -12,10 +12,12 @@ from django.template.loader import get_template
 import sendgrid
 import os
 from sendgrid.helpers.mail import *
+from django.template import RequestContext
+
 
 def index(request):
 	services_list = Services.get_all_services()
-	template = loader.get_template('base.html')
+	template = loader.get_template('contact_template.html')
 	portfolio_list = Portfolio.get_all_services()
 	employees = Employee.objects.all()
 	form_class = ContactForm
