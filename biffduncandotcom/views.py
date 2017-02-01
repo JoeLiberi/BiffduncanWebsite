@@ -15,7 +15,6 @@ from sendgrid.helpers.mail import *
 from django.template import RequestContext
 from django.http import HttpResponse
 import json
-from django.urls import reverse
 from django.http import HttpResponseRedirect
 
 def index(request):
@@ -61,7 +60,7 @@ def index(request):
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
 
-			return HttpResponseRedirect(reverse('index'))
+			return HttpResponseRedirect('#')
 
 	context = {
 		'services' : services_list,
