@@ -3,7 +3,10 @@ from cms.plugin_pool import plugin_pool
 from services.models import Services as ServicesPluginModel
 from portfolio.models import Portfolio as PortfolioPluginModel
 from aboutus.models import Aboutus as AboutusPluginModel
+from contactus.models import ContactUs as ContactusPluginModel
 from django.utils.translation import ugettext_lazy as _
+from sekizai.context import SekizaiContext                                      
+
 
 class ServicesPlugin(CMSPluginBase):
 	model = ServicesPluginModel
@@ -38,4 +41,16 @@ class AboutusPlugin(CMSPluginBase):
 		context = super(AboutusPlugin, self).render(context, instance, placeholder)
 		return context
 
+class ContactusPlugin(CMSPluginBase):
+	model = ContactusPluginModel
+	name = _("Contactus Plugin")
+	render_template = "Contactus.html"
+	cache = False
+
+	def render(self, context, insteand, placeholder):
+		# context.update({'services' : ServicesPluginModel.get_all_services()})
+		context = super(ContactusPlugin, self).render(context, instance, placeholder)
+		return context
+
 plugin_pool.register_plugin(ServicesPlugin)
+plugin_pool.register_plugin(ContactusPlugin)

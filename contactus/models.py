@@ -3,7 +3,6 @@ from cms.models.pluginmodel import CMSPlugin
 from django.utils.translation import ugettext_lazy as _
 
 class ContactUs(CMSPlugin):
-	# Services Model
 
 	STATUS_CHOICES = (
 		(1, _('Draft')),
