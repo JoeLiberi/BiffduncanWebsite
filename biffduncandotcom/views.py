@@ -13,7 +13,8 @@ import sendgrid
 import os
 from sendgrid.helpers.mail import *
 from django.template import RequestContext
-
+from django.http import HttpResponse
+import json
 
 def index(request):
 	services_list = Services.get_all_services()
@@ -48,24 +49,16 @@ def index(request):
 				'form_content': form_content,
 				})
 
-			content = template.render(context)
+			content = Content("text/plain", template.render(context))
 
-			# email = EmailMessage(
-			# 	"New contact form submission",
-			# 	content,
-			# 	"Your website" +'',
-			# 	['info@biffduncan.com'],
-			# 	headers = {'Reply-To': contact_email }
-			# 	)
-			# email.send()
-			# return redirect('#')
+			sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_KEY'))
 
-			sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('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'))
 			from_email = Email("website@biffduncan.com")
 			subject = "New Customer Inquery"
-			to_email = Email("info@biffduncan.com")
+			to_email = Email("jliberi@biffduncan.com")
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
+
 			return redirect('#')
 
 	context = {
