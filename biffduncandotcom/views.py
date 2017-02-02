@@ -56,7 +56,7 @@ def index(request):
 
 			from_email = Email("website@biffduncan.com")
 			subject = "New Customer Inquery"
-			to_email = Email("jliberi@biffduncan.com")
+			to_email = Email("websiteleads@biffduncan.com")
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
 
