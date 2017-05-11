@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'contactus.apps.ContactusConfig',
     'widget_tweaks',
     # 'django_smartfields',
-    'tinymce'
+    'tinymce',
+    'captcha'
 ]
 
 

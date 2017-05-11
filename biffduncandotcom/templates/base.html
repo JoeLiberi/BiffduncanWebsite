@@ -29,6 +29,8 @@
     <!-- Theme CSS -->
     <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
 
+    <script src="{% static 'js/enable_button.js' %}"></script>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -253,6 +255,8 @@
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Contact Us</h2>
+                    <h3 class="section-heading">Phone: 732.922.2227</h3>
+                    <h3 class="section-heading">Fax: 732.876.0263</h3>
                 </div>
             </div>
             <div class="row">
@@ -277,11 +281,13 @@
                                     {{ form.content|addcss:'form-control' }}
                                 </div>
                             </div>
-                            <div class="clearfix"></div>
-                            <div class="col-lg-12 text-center">
+                            <!-- <div class="clearfix"></div> -->
+<!--                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" class="btn btn-xl">Send Message</button>
-                            </div>
+                                {{ form.captcha }}
+                                <div class="g-recaptcha" data-sitekey="6LdYrxwUAAAAAJE4NaNTWQZKMFmWBy-y6weZ9_Vc" data-callback="enableBtn"></div>
+                                <button type="submit" value="Submit" id="contactus_submit" class="btn btn-xl">Send Message</button>
+                            </div> -->
                         </div>
                     </form>
                 </div>
@@ -348,6 +354,8 @@
     <!-- jQuery -->
     <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
 
+    <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
 
@@ -356,10 +364,13 @@
 
     <!-- Contact Form JavaScript -->
     <script src="{% static 'js/jqBootstrapValidation.js' %}"></script>
+
     <script src="{% static 'js/contact_me.js' %}"></script>
 
     <!-- Theme JavaScript -->
     <script src="{% static 'js/agency.min.js' %}"></script>
+
+    <script type="text/javascript"></script>
 
     {% render_block "js" %}
 

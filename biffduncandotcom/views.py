@@ -55,7 +55,7 @@ def index(request):
 			sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_KEY'))
 
 			from_email = Email("website@biffduncan.com")
-			subject = "New Customer Inquery"
+			subject = "New Customer Inquiry"
 			to_email = Email("websiteleads@biffduncan.com")
 			mail = Mail(from_email, subject, to_email, content)
 			response = sg.client.mail.send.post(request_body=mail.get())
