@@ -67,7 +67,8 @@ def index(request):
 		'portfolio' : portfolio_list,
 		'aboutus' : aboutus_txt,
 		'employees' : employees,
-		'form' : form_class
+		'form' : form_class,
 	}
 	return render(request, 'base.html', context)
 	# return render_to_response(template='base.html',)
+
