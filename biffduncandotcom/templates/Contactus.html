@@ -1,0 +1,43 @@
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contact Us</h2>
+                <h3 class="section-heading">Phone: 732.922.2227</h3>
+                <h3 class="section-heading">Fax: 732.876.0263</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% load myfilters %}
+            <div class="col-lg-12">
+                <form role="form" action="" method="post">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.contact_name|addcss:'form-control' }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.contact_email|addcss:'form-control' }}
+                            </div>
+                            <div class="form-group">
+                                {{ form.contact_phone|addcss:'form-control' }}
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                {{ form.content|addcss:'form-control' }}
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl" onclick="contact_me">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
