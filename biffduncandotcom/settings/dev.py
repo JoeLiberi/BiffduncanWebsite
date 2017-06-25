@@ -46,12 +46,15 @@ INSTALLED_APPS = [
     'biffduncandotcom',
     'services.apps.ServicesConfig',
     'portfolio.apps.PortfolioConfig',
+    'customerportal.apps.CustomerportalConfig',
     'aboutus.apps.AboutusConfig',
     'ourteam.apps.OurteamConfig',
     'contactus.apps.ContactusConfig',
+    'home.apps.HomeConfig',
     'widget_tweaks',
     # 'django_smartfields',
-    'tinymce'
+    'tinymce',
+    'captcha'
 ]
 
 

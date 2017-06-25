@@ -25,13 +25,14 @@ admin.autodiscover()
 
 urlpatterns = [
 	url(r'^admin/', include(admin.site.urls)),
-	url(r'^$', views.index, name='index'),
+	url(r'^cportal/', include('customerportal.urls')),
+	url(r'^$', include('home.urls')),
 	url(r'^', include('cms.urls')),
 ]
 
 # This is only needed when using runserver.
-if settings.DEBUG:
-    urlpatterns = [
-        url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
-            {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
-        ] + urlpatterns + staticfiles_urlpatterns()
+# if settings.DEBUG:
+#     urlpatterns = [
+#         url(r'^media/(?P<path>.*)$', 'django.views.static.serve',
+#             {'document_root': settings.MEDIA_ROOT, 'show_indexes': True}),
+#         ] + urlpatterns + staticfiles_urlpatterns()

@@ -69,6 +69,5 @@ def index(request):
 		'employees' : employees,
 		'form' : form_class,
 	}
-	return render(request, 'base.html', context)
+	return render(request, 'home.html', context)
 	# return render_to_response(template='base.html',)
-

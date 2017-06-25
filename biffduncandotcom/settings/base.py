@@ -106,3 +106,7 @@ THUMBNAIL_PROCESSORS = (
     'filer.thumbnail_processors.scale_and_crop_with_subject_location',
     'easy_thumbnails.processors.filters'
 )
+
+
+RECAPTCHA_PUBLIC_KEY = '6LdYrxwUAAAAAJE4NaNTWQZKMFmWBy-y6weZ9_Vc'
+RECAPTCHA_PRIVATE_KEY = '6LdYrxwUAAAAAN7KJxwGGNoR_ML_nAmjLdb4VImW'
