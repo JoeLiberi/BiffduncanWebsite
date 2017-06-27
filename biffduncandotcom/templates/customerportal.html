@@ -1,17 +1,49 @@
-{% extends 'base.html' %}
 {% load staticfiles %}
 {% load cms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
 
-{% block content %}
+<!--     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content=""> -->
+   
+    <link rel="stylesheet" href="{% static 'css/cportal.css' %}">
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-<div id="mySidenav" class="sidenav">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Forums</a>
-  <a href="#">Customer Information</a>
-  <a href="#">Sites</a>
-</div>
+    <!-- Custom Fonts -->
+    <!-- <link href="{% static 'vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    
 
-<!-- Use any element to open the sidenav -->
-<span onclick="openNav()">open</span>
 
-{% endblock %}
+</head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div id="sidebar-menu" class="col-sm-12 col-md3 col-lg-3">
+                    <ul class=sidebar-nav>
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Forms</a>
+                        </li>
+                        <li>
+                            <a href="#">Sign Out</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-12 col-md-9 col-lg-6">
+                    <div id="main-content">
+                        <h1>This is some filler</h1>
+                        <p> filler filler fillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfill</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
