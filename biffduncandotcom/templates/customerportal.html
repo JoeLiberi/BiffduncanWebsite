@@ -11,6 +11,9 @@
     <meta name="author" content=""> -->
    
     <link rel="stylesheet" href="{% static 'css/cportal.css' %}">
+        <!-- Theme CSS -->
+    <link href="{% static 'css/agency.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
@@ -19,28 +22,71 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     
 
-
 </head>
     <body>
-        <div class="container-fluid">
-            <div class="row">
-                <div id="sidebar-menu" class="col-sm-12 col-md3 col-lg-3">
-                    <ul class=sidebar-nav>
-                        <li>
-                            <a href="#">Home</a>
+
+        <!-- Navigation -->
+        <nav id="mainNav" class="mainNav">
+            <div class="nav-container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <a class="navbar-brand page-scroll" href="#page-top">BDA</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="hidden">
+                            <a href="#page-top"></a>
                         </li>
                         <li>
-                            <a href="#">Forms</a>
+                            <a class="page-scroll" href="http://www.biffduncan.com/#services">Services</a>
                         </li>
                         <li>
-                            <a href="#">Sign Out</a>
+                            <a class="page-scroll" href="http://www.biffduncan.com/#about">About</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://www.biffduncan.com/#team">Team</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://www.biffduncan.com/#contact">Contact</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="http://www.biffduncan.com/cportal">Customer Portal</a>
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="https://remote.biffduncan.com">Support</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-9 col-lg-6">
-                    <div id="main-content">
-                        <h1>This is some filler</h1>
-                        <p> filler filler fillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfill</p>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+        </nav>
+
+        <div id="all_holder">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="sidebar-menu" class="col-sm-12 col-md3 col-lg-3">
+                        <ul class=sidebar-nav>
+                            <li class="nav-link">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Forms</a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="#">Sign Out</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-custom col-sm-12 col-md-9 col-lg-6">
+                        <div id="main-content">
+                            <h1>This is some filler</h1>
+                            <p> filler filler fillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfill</p>
+                        </div>
+                    </div>
+                    <div id="sidebar-menu" class="col-sm-12 col-md3 col-lg-3">
                     </div>
                 </div>
             </div>
