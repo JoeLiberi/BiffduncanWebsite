@@ -79,15 +79,13 @@
                                 <a href="#">Forms</a>
                             </li>
                             <li class="nav-link">
-                                <a href="#">Sign Out</a>
+                                <a href="http://127.0.0.1:8000/logout">Sign Out</a>
                             </li>
                         </ul>
                     </div>
                     <div class="main-custom col-sm-12 col-md-9 col-lg-6">
-                        <div id="main-content">
-                            <h1>This is some filler</h1>
-                            <p> filler filler fillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfillerfill</p>
-                        </div>
+                        {% block content %}
+                        {% endblock %}
                     </div>
                     <div id="sidebar-menu" class="col-sm-12 col-md3 col-lg-3">
                     </div>
