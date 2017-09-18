@@ -82,3 +82,4 @@ LOGIN_EXEMPT_URLS = (
     r'^\\',
 ) 
 LOGIN_REDIRECT_URL = '/cportal'
+

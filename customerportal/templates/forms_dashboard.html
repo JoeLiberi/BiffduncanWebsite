@@ -1,0 +1,60 @@
+{% extends 'customerportal.html' %}
+
+{% block content %}
+
+	<div id="createForm">
+
+		<form action="{% url 'forms/' %}" method="post">
+			{{create_form.as_table}}
+			<input id="submitbtn" class="btn" type="button" value="Submit" name="submit">
+		</form>
+
+		<!-- <input id="new_fild" type="button" value="New Field" name="new_field"> -->
+
+	</div>
+
+	<div id="formList">
+
+		{% if not form_list %}
+			<p>No forms have been created yet. Create one!</p>
+		{% else %}
+			{{form_list}}
+		{% endif %}
+
+		<input id="createbtn" type="button" value="Create" name="create">
+
+	</div>
+	
+
+<script type="text/javascript"> 
+	var createbtn = document.getElementById("createbtn");
+	var submitbtn = document.getElementById("submitbtn");
+	var createForm = document.getElementById("createForm");
+	var formList = document.getElementById("formList");
+
+	function new_form() {
+		createForm.style.visibility = "visible";
+		formList.style.visibility = "hidden";
+	}
+
+	function show_forms(){
+		createForm.style.visibility = "hidden";
+		formList.style.visibility = "visible";
+	}
+
+	function toggle() {
+	    if (createForm.style.visibility === "hidden") {
+	        new_form();
+	    } else {
+	        show_forms();
+	    }
+	}
+
+	show_forms();
+	createbtn.addEventListener("click", toggle, false);
+
+
+
+</script>
+
+{% endblock %}

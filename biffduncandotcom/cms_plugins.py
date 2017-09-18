@@ -6,7 +6,7 @@ from aboutus.models import Aboutus as AboutusPluginModel
 from contactus.models import ContactUs as ContactusPluginModel
 from django.utils.translation import ugettext_lazy as _
 from sekizai.context import SekizaiContext                                      
-
+from customerportal.models import NewEmployeePluginModel
 
 class ServicesPlugin(CMSPluginBase):
 	model = ServicesPluginModel
@@ -54,3 +54,4 @@ class ContactusPlugin(CMSPluginBase):
 
 plugin_pool.register_plugin(ServicesPlugin)
 plugin_pool.register_plugin(ContactusPlugin)
+
