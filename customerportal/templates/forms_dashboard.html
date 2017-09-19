@@ -7,15 +7,16 @@
 		<form action="" method="post">
 			{% csrf_token %}
 			{{create_form}}
-			<input class="btn" type="button" value="Submit" name="submit">
+			<input type="submit" value="Submit" />
 		</form>
 		<input id="new_fild" type="button" value="New Field" name="new_field">
 
 	</div>
 
 	<div id="formList">
-
-		{% if not form_list %}
+		{% if form %}
+			{{form}}
+		{% elif not form_list %}
 			<p>No forms have been created yet. Create one!</p>
 		{% else %}
 			{{form_list}}

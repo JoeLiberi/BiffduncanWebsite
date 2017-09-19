@@ -1,24 +1,32 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.template import loader, Context
 from django.contrib.auth.decorators import login_required
 from customerportal.models import NewEmployee
 from .forms import NewEmployeeForm
+from django.core.urlresolvers import reverse
+
 
 @login_required(login_url='/login/')
-def index(request):
-	context = {
-		'test': "This is a placeholder"
-	}
+def dashboard(request):
+	try:
+		employees = NewEmployee.objects.all().order_by('created')
+
+		context = {
+			'employees': employees
+		}
+	except:
+		context = {
+			'employees': 'no employees created'
+		}
+
 	return render(request, 'dashboard.html', context)
 
 @login_required(login_url='/login/')
 def forms_dashboard(request):
 
 	create_form = NewEmployeeForm()
-
-
 	if request.method == 'GET':
 
 		try:
@@ -34,8 +42,21 @@ def forms_dashboard(request):
 				'create_form': create_form
 			}
 
-	if request.method == 'POST' and form.is_valid():
-		form.save()
-		return HttpResponseRedirect('/dashboard')
+		return render(request, 'forms_dashboard.html', context)
 
-	return render(request, 'forms_dashboard.html', context)
+	elif request.method == 'POST':
+		form = NewEmployeeForm(request.POST)
+
+		if form.is_valid():
+			form.save()
+			return HttpResponseRedirect(reverse('dashboard') )
+
+		else:
+			context = {
+				'form': form
+			}
+
+		return render(request, 'forms_dashboard.html', context)
+	# if request.method == 'POST' and form.is_valid():
+	# 	form.save()
+	# 	return HttpResponseRedirect('/dashboard')

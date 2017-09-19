@@ -19,7 +19,8 @@ class NewEmployee(models.Model):
 
 
 	name = models.CharField(_('name'), max_length=48, unique=True, blank=False)
-	location = models.CharField(_('location'), max_length=48, unique=True, blank=False)
+	location = models.CharField(_('location'), max_length=48, blank=False)
+
 
 	slug = models.SlugField(max_length=40, null = False, blank = True)
 
@@ -31,18 +32,15 @@ class NewEmployee(models.Model):
 	def __str__(self):
 		return self.name
 
-	def save(self, *args, **kwargs):
-		self.slug = slugify(self.name)
-		super(NewEmployee, self).save(*args, **kwargs)
+	# def save(self, *args, **kwargs):
+	# 	self.slug = slugify(self.name)
+	# 	super(NewEmployee, self).save(*args, **kwargs)
 
 	def slug(sluggy):
 		sluggy = sluggy.replace(' ', '-').lower()
 		return slugify(sluggy)
 
 
-class NewEmployeePluginModel(CMSPlugin):
-	title = models.CharField(u'title',
-		blank=True,
-		help_text=u'Optional. Title of the widget.',
-		max_length=64,
-	)
+# class NewEmployeePluginModel(CMSPlugin):
+# 	name = models.CharField(_('name'), max_length=48, unique=True, blank=False)
+# 	location = models.CharField(_('location'), max_length=48, unique=True, blank=False)
