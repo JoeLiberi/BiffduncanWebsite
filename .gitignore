@@ -5,3 +5,4 @@ biffduncandotcom/staticfiles
 biffduncandotcom/settings/dev.py
 biffduncandotcom/tmp
 *.pyc
+database.db
