@@ -3,13 +3,13 @@
 {% block content %}
 
 	<div id="createForm">
-
-		<form action="{% url 'forms/' %}" method="post">
+		
+		<form action="forms" method="post">
 			{{create_form.as_table}}
 			<input id="submitbtn" class="btn" type="button" value="Submit" name="submit">
 		</form>
 
-		<!-- <input id="new_fild" type="button" value="New Field" name="new_field"> -->
+		<input id="new_fild" type="button" value="New Field" name="new_field">
 
 	</div>
 
