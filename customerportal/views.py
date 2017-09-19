@@ -34,15 +34,8 @@ def forms_dashboard(request):
 				'create_form': create_form
 			}
 
-	elif request.method == 'POST':
-
-		form = NewEmployeeForm(request.POST)
-
-		if form.is_valid():
-			name = form.cleaned_data['name']
-			location = form.cleaned_data['location']
-
-			form.save()
-			return HttpResponseRedirect('/cportal/forms/')
+	if request.method == 'POST' and form.is_valid():
+		form.save()
+		return HttpResponseRedirect('/dashboard')
 
 	return render(request, 'forms_dashboard.html', context)

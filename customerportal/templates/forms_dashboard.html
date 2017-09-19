@@ -3,12 +3,12 @@
 {% block content %}
 
 	<div id="createForm">
-		
-		<form action="forms" method="post">
-			{{create_form.as_table}}
-			<input id="submitbtn" class="btn" type="button" value="Submit" name="submit">
-		</form>
 
+		<form action="" method="post">
+			{% csrf_token %}
+			{{create_form}}
+			<input class="btn" type="button" value="Submit" name="submit">
+		</form>
 		<input id="new_fild" type="button" value="New Field" name="new_field">
 
 	</div>
@@ -28,7 +28,6 @@
 
 <script type="text/javascript"> 
 	var createbtn = document.getElementById("createbtn");
-	var submitbtn = document.getElementById("submitbtn");
 	var createForm = document.getElementById("createForm");
 	var formList = document.getElementById("formList");
 
